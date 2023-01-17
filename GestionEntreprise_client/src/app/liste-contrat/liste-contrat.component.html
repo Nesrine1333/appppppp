@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #customers {
+            font-family: Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 97%;
+            vertical-align: middle;
+              border-spacing: 0;
+              
+            
+               
+    position: absolute;
+    left: 1%;
+      
+    min-width: 400px;
+         box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+      
+    margin: 30px 0;
+    font-size: 0.9em;
+    
+  
+
+        }
+
+        #customers td,
+        #customers th {
+            border: thin solid rgb(255, 255, 255);
+            padding: 8px;
+            text-align: center;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #f2f2f2;
+              text-align: center;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+              text-align: center;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #3239a0;
+            color: white;
+          text-align: center;
+
+             
+        }
+    </style>
+</head>
+
+<body>
+
+    <table id="customers">
+        <tr>
+            <th>Reference</th>
+            <th>typeContrat</th>
+            <th>salaire</th>
+            <th>Nom Employe</th>
+            <th>Prenom Employe</th>
+            <th>Email Employe</th>
+        </tr>
+        <tr *ngFor="let p of Contrat">
+            <td>{{p.reference}}</td>
+            <td>{{p.typeContrat}}</td>
+            <td>{{p.salaire}}</td>
+            <td>{{p.employe.prenom}}</td>
+            <td>{{p.employe.nom}}</td>
+            <td>{{p.employe.email}}</td>
+        
+        </tr>
+    </table>
+
+</body>
+
+</html>
